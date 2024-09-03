@@ -147,7 +147,7 @@ Falling back to synthetic events
 
 <pre>
 rm -r ./metadata
-docker compose -f docker-compose-dev.yml --env-file ./.env.dev up -d
+docker compose -f docker-compose-dev.yml --env-file ./.env up -d
 </pre>
 
 ## Puppeteer
@@ -193,3 +193,29 @@ docker run --rm -p 8000:8000 \
 --name siesta-lite \
 akrasnov87/siesta-lite:5.6.1
 </pre>
+
+## Запуск тестирования в фоне
+
+1. Запускаем `datalens`
+<pre>
+sudo rm -r ./metadata
+docker compose -f docker-compose-dev.yml --env-file ./.env up
+</pre>
+
+__Примечание__: тестирование должно быть запущено, если есть возможность авторизации на странице http://localhost:8080
+
+В терминале должена появиться строке `Worker listening 59 on port 5001/demo/`
+
+2. Ожидаем загрузки `datalens`
+
+3. Запускаем тестирование:
+<pre>
+docker run --rm -p 8000:8000 \
+-v /home/a-krasnov/data/code/datalens/siesta-5.6.1-trial/custom-data:/siesta/custom-data \
+-v /home/a-krasnov/data/code/datalens/siesta-5.6.1-trial/reports:/siesta/reports \
+-e BACKGROUND_TEST_FOLDER=custom-data \
+--name siesta-lite \
+akrasnov87/siesta-lite:5.6.1
+</pre>
+
+4. Результат смотрим на странице http://host.docker.internal:8000/reports/
