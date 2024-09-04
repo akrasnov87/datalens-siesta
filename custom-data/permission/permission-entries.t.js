@@ -35,7 +35,7 @@ describe({
 
         { click : ".g-dialog .g-button__text:textEquals(Сохранить)" },
 
-        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o']", offset : [5.02606201171875,6.3370361328125], desc: "Переход в workbook" },
+        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o']", desc: "Переход в workbook" },
 
         { click : "#root .dl-content-row[href='/wizard/x2urxfzzoeicm-charts-area-chart'] .dl-content-row__content-cell_controls .g-button__icon-inner", offset : [23.14312744140625,11.963165283203125] },
 
@@ -100,7 +100,7 @@ describe({
 
         { waitForPageLoad : [], trigger : { click : "#root .g-button__text" } },
 
-        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o'] div:nth-of-type(5) button.g-button", offset : [5.02606201171875,6.3370361328125], desc: "Назначение прав" },
+        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o'] div:nth-of-type(5) button.g-button", desc: "Назначение прав" },
 
         { click : ".dl-collection-dropdown-action__text:textEquals(Доступ)" },
 
@@ -112,9 +112,9 @@ describe({
 
         { click : ".g-dialog .g-button__text:textEquals(Сохранить)" },
 
-        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o']", offset : [5.02606201171875,6.3370361328125], desc: "Переход в workbook" },
+        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o']", desc: "Переход в workbook" },
 
-        { click : "#root .dl-content-row[href='/wizard/x2urxfzzoeicm-charts-area-chart'] .dl-content-row__content-cell_controls .g-button__icon-inner", offset : [23.14312744140625,11.963165283203125] },
+        { click : "#root .dl-content-row[href='/wizard/x2urxfzzoeicm-charts-area-chart'] .dl-content-row__content-cell_controls .g-button__icon-inner" },
 
         { click : ".dl-collection-dropdown-action__text:textEquals(Доступ)", desc: "Назначение прав на чарт" },
 

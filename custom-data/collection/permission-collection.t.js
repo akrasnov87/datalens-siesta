@@ -8,11 +8,13 @@ describe({
     var collectionName = 'project-collection-permission_collection-'+ Date.now();
 
     var args = null;
+    var pageUrl = null;
     
     t.chain(
         function(next) {
             t.harness.configLoad((data)=>{
                 args = data;
+                pageUrl = data.pageUrl
                 next();
             })
         },
@@ -31,11 +33,23 @@ describe({
 
         { click : ".g-dialog-footer__button-apply .g-button__text" },
 
-        { click : "#root .dl-collection-breadcrumbs__item:textEquals(Коллекции и воркбуки)" },
+        {
+            action: function(next) {
+                t.global.location.href = pageUrl + '/collections';
+                next();
+            },
+            desc: "Создание коллекции и воркбука"
+        },
 
-        { click : "#root [title='" + collectionName + "']" },
+        { click : "#root [title='" + collectionName + "']", desc: "test_1" },
 
-        { click : "#root .dl-collection-breadcrumbs__item:textEquals(Коллекции и воркбуки)" },
+        {
+            action: function(next) {
+                t.global.location.href = pageUrl + '/collections';
+                next();
+            },
+            desc: "Создание коллекции и воркбука"
+        },
 
         { click : "#root .dl-collection-content-table__content-row:nth-of-type(1) .g-button__icon-inner > svg:nth-of-type(1)", desc: "Назначение прав" },
 
@@ -44,8 +58,6 @@ describe({
         { click : ".g-table__row .g-table__cell_edge-padding:textEquals(Администратор)~.g-table__cell_edge-padding:nth-of-type(2) .g-checkbox__control" },
 
         { click : ".g-button__text:textEquals(Сохранить)" },
-
-        { moveCursorTo : "#root .dl-collection-page__content", offset : [269,330] },
 
         {
             action: function(next) {
@@ -62,7 +74,7 @@ describe({
 
         { waitForPageLoad : [], trigger : { click : "#root .g-button__text" } },
 
-        { click : "#root [title='" + collectionName + "']" },
+        { click : "#root [title='" + collectionName + "']", desc: "test_1" },
 
         {
             action: function(next) {
@@ -96,7 +108,7 @@ describe({
 
         { waitForPageLoad : [], trigger : { click : "#root .g-button__text" } },
 
-        { click : "#root .dl-collection-content-table__content-row:nth-of-type(1) .g-button__icon-inner > svg:nth-of-type(1)", offset : [7.29852294921875,3.757171630859375] },
+        { click : "#root .dl-collection-content-table__content-row:nth-of-type(1) .g-button__icon-inner > svg:nth-of-type(1)" },
 
         { click : ".dl-collection-dropdown-action__text:textEquals(Удалить)" },
 

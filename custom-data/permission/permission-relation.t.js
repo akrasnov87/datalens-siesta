@@ -22,7 +22,7 @@ describe({
 
         { waitForPageLoad : [], trigger : { click : "#root .g-button__text" } },
 
-        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o'] div:nth-of-type(5) button.g-button", offset : [5.02606201171875,6.3370361328125], desc: "Назначение прав" },
+        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o'] div:nth-of-type(5) button.g-button", desc: "Назначение прав" },
 
         { click : ".dl-collection-dropdown-action__text:textEquals(Доступ)" },
 
@@ -34,7 +34,7 @@ describe({
 
         { click : ".g-dialog .g-button__text:textEquals(Сохранить)" },
 
-        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o']", offset : [5.02606201171875,6.3370361328125], desc: "Переход в workbook" },
+        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o']", desc: "Переход в workbook" },
 
         { click : "#root .dl-content-row[href='/qvnkqzm0wstyf-datalens-demo'] div:nth-of-type(4) button.g-button" },
 
@@ -109,7 +109,7 @@ describe({
 
         { waitForPageLoad : [], trigger : { click : "#root .g-button__text" } },
 
-        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o'] div:nth-of-type(5) button.g-button", offset : [5.02606201171875,6.3370361328125], desc: "Назначение прав" },
+        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o'] div:nth-of-type(5) button.g-button", desc: "Назначение прав" },
 
         { click : ".dl-collection-dropdown-action__text:textEquals(Доступ)" },
 
@@ -121,7 +121,7 @@ describe({
 
         { click : ".g-dialog .g-button__text:textEquals(Сохранить)" },
 
-        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o']", offset : [5.02606201171875,6.3370361328125], desc: "Переход в workbook" },
+        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o']", desc: "Переход в workbook" },
 
         { click : "#root .dl-content-row[href='/qvnkqzm0wstyf-datalens-demo'] div:nth-of-type(4) button.g-button" },
 
