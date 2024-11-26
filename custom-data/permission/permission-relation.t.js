@@ -50,9 +50,9 @@ describe({
 
         { click : ".dl-collection-dropdown-action__text:textEquals(Связанные объекты)", desc: "Назначение прав через связанные объекты" },
 
-        { moveCursorTo : ".related-entities-list:nth-of-type(1) .related-entities-list__title-wrapper .g-control-label__indicator", offset : [21,12] },
+        { moveCursorTo : ".related-entities-list:nth-of-type(2) .related-entities-list__title-wrapper .g-control-label__indicator", offset : [21,12] },
 
-        { click : ".related-entities-list:nth-of-type(1) .related-entities-list__title-wrapper .g-control-label__indicator", offset : [21.02862548828125,12.498977661132812] },
+        { click : ".related-entities-list:nth-of-type(2) .related-entities-list__title-wrapper .g-control-label__indicator", offset : [21.02862548828125,12.498977661132812] },
 
         { click : ".g-button__text:textEquals(Применить)" },
 
@@ -137,9 +137,9 @@ describe({
 
         { click : ".dl-collection-dropdown-action__text:textEquals(Связанные объекты)", desc: "Назначение прав через связанные объекты" },
 
-        { moveCursorTo : ".related-entities-list:nth-of-type(1) .related-entities-list__title-wrapper .g-control-label__indicator", offset : [21,12] },
+        { moveCursorTo : ".related-entities-list:nth-of-type(2) .related-entities-list__title-wrapper .g-control-label__indicator", offset : [21,12] },
 
-        { click : ".related-entities-list:nth-of-type(1) .related-entities-list__title-wrapper .g-control-label__indicator", offset : [21.02862548828125,12.498977661132812] },
+        { click : ".related-entities-list:nth-of-type(2) .related-entities-list__title-wrapper .g-control-label__indicator", offset : [21.02862548828125,12.498977661132812] },
 
         { click : ".g-button__text:textEquals(Применить)" },
 

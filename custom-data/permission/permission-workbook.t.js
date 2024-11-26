@@ -112,6 +112,6 @@ describe({
 
         { click : "#root .g-button__text"  },
 
-        { type : "#root .gc-placeholder-container__title:textEquals(Нет коллекций и воркбуков)" },
+        { type : "#root .gc-placeholder-container__title:textEquals(Нет коллекций и воркбуков)" }
     )
 });

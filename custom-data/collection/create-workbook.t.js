@@ -26,7 +26,7 @@ describe({
 
         { click : "#root .g-button__icon_side_end .g-button__icon-inner > svg:nth-of-type(1)" },
 
-        { click : ".dl-collection-actions__dropdown-text:textEquals(Создать коллекцию)", desc: "Создание коллекции" },
+        { click : ".dl-collection-actions__dropdown-text:contains(Коллекцию)", desc: "Создание коллекции" },
 
         { type : collectionName, target : ".g-dialog-body .dl-collection-dialog__field:nth-of-type(1) input" },
 
@@ -44,7 +44,7 @@ describe({
 
         { click : "#root [title='" + collectionName + "']" },
 
-        { click : "#root .g-button__text:textEquals(Создать воркбук)", desc: "Создание first workbook" },
+        { click : "#root .g-button__text:contains(Воркбук)", desc: "Создание first workbook" },
 
         { type : "First workbook", target : ".g-text-input_size_m .g-text-input__control" },
 
@@ -64,7 +64,7 @@ describe({
 
         { click : "#root .g-button__icon_side_end path", offset : [5.38421630859375,3.5467987060546875] },
 
-        { click : ".dl-collection-actions__dropdown-text:textEquals(Создать воркбук)" },
+        { click : ".dl-collection-actions__dropdown-text:contains(Воркбук)" },
 
         { type : "Second workbook", target : ".g-text-input_size_m .g-text-input__control", desc: "Создание second workbook" },
 

@@ -27,7 +27,7 @@ describe({
 
         { click : "#root .g-button__icon_side_end .g-button__icon-inner > svg:nth-of-type(1)" },
 
-        { click : ".dl-collection-actions__dropdown-text:textEquals(Создать коллекцию)", desc: "Создание коллекции" },
+        { click : ".dl-collection-actions__dropdown-text:contains(Коллекцию)", desc: "Создание коллекции" },
 
         { type : collectionName, target : ".g-dialog-body .dl-collection-dialog__field:nth-of-type(1) input" },
 

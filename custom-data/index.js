@@ -24,7 +24,6 @@ configLoad((args) => {
         title               : 'Siesta generic browser examples',
         viewDOM             : true,
         maxThreads          : 1,
-
         // Define any global JS and CSS dependencies, these files will be injected into each test.
         preload             : ['./helper.js'],
 

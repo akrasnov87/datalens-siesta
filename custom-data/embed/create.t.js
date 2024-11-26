@@ -32,6 +32,10 @@ describe({
         { click : ".g-menu__item-content:textEquals(Поделиться)" },
 
         {
+            waitFor: 5000
+        },
+
+        {
             action: function(next) {
                 embedUrl = t.global.document.getElementsByClassName('dialog-share__text-field')[0].innerText;
                 next();
@@ -46,6 +50,10 @@ describe({
                 next();
             },
             "desc": "Сброс авторизации и просмотр ссылки"
+        },
+
+        {
+            waitFor: 5000
         },
 
         {

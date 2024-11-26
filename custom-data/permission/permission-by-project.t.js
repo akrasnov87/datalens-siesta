@@ -100,7 +100,7 @@ describe({
 
         { click : "#root .g-button__icon_side_end .g-button__icon-inner > svg:nth-of-type(1)" },
 
-        { click : ".dl-collection-actions__dropdown-text:textEquals(Создать коллекцию)", desc: "Создание коллекции" },
+        { click : ".dl-collection-actions__dropdown-text:contains(Коллекцию)", desc: "Создание коллекции" },
 
         { type : collectionName, target : ".g-dialog-body .dl-collection-dialog__field:nth-of-type(1) input" },
 
@@ -114,7 +114,7 @@ describe({
             type: ".gc-placeholder-container__title:textEquals(Нет коллекций и воркбуков)"
         },
 
-        { click : "#root .g-button__text:textEquals(Создать воркбук)", desc: "Создание воркбука" },
+        { click : "#root .g-button__text:contains(Воркбук)", desc: "Создание воркбука" },
 
         { type : workbookName, target : ".g-text-input_size_m .g-text-input__control" },
 
@@ -138,7 +138,7 @@ describe({
 
         { click : "#root .g-button__icon_side_end .g-button__icon-inner > svg:nth-of-type(1)" },
 
-        { click : ".dl-collection-actions__dropdown-text:textEquals(Создать воркбук)", desc: "Создание воркбука" },
+        { click : ".dl-collection-actions__dropdown-text:contains(Воркбук)", desc: "Создание воркбука" },
 
         { type : workbookMainName, target : ".g-text-input_size_m .g-text-input__control" },
 
@@ -192,7 +192,7 @@ describe({
 
         { type : collectionName, target : "#root .dl-collection-filters__filter-string .g-text-input__control" },
 
-        { waitFor: 500 },
+        { waitFor: 3000 },
 
         { click : "#root .dl-collection-content-table__title-col", offset : [185.6695556640625,26.91766357421875] },
 
