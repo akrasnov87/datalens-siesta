@@ -146,7 +146,7 @@ Falling back to synthetic events
 Запускаем `datalens`:
 
 <pre>
-rm -r ./metadata
+sudo rm -r ./metadata
 docker compose -f docker-compose-dev.yml --env-file ./.env up -d
 </pre>
 

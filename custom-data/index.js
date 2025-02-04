@@ -146,6 +146,17 @@ configLoad((args) => {
                     url         : 'embed/create.t.js'
                 }
             ]
+        },
+        {
+            group               : 'Copy/Move',
+            //simulation          : 'native',
+            expanded            : false,
+            items               : [
+                {
+                    pageUrl     : args.pageUrl,
+                    url         : 'copy/workbook.t.js'
+                }
+            ]
         }
     )
 

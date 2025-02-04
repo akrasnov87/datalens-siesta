@@ -145,7 +145,7 @@ describe({
                 t.global.localStorage.clear();
                 t.global.location.reload();
 
-                t.global.location.href = embedUrl_1;
+                t.global.location.href = embedUrl_1;            //simulation          : 'native',
 
                 next();
             },
@@ -153,7 +153,7 @@ describe({
         },
 
         {
-            waitFor: 1000
+            waitFor: 5000
         },
 
         function(next) {

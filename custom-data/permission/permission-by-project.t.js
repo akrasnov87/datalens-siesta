@@ -114,7 +114,7 @@ describe({
             type: ".gc-placeholder-container__title:textEquals(Нет коллекций и воркбуков)"
         },
 
-        { click : "#root .g-button__text:contains(Воркбук)", desc: "Создание воркбука" },
+        { click : "#root .g-button__text:contains(Подключить свои данные)", desc: "Создание воркбука" },
 
         { type : workbookName, target : ".g-text-input_size_m .g-text-input__control" },
 

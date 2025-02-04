@@ -44,7 +44,7 @@ describe({
 
         { click : "#root [title='" + collectionName + "']" },
 
-        { click : "#root .g-button__text:contains(Воркбук)", desc: "Создание first workbook" },
+        { click : "#root .g-button__text:contains(Подключить свои данные)", desc: "Создание first workbook" },
 
         { type : "First workbook", target : ".g-text-input_size_m .g-text-input__control" },
 
