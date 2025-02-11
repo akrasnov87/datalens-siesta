@@ -147,6 +147,7 @@ Falling back to synthetic events
 
 <pre>
 sudo rm -r ./metadata
+sudo rm -r ./pg-demo-connection/data
 docker compose -f docker-compose-dev.yml --env-file ./.env up -d
 </pre>
 
@@ -199,6 +200,7 @@ akrasnov87/siesta-lite:5.6.1
 1. Запускаем `datalens`
 <pre>
 sudo rm -r ./metadata
+sudo rm -r ./pg-demo-connection/data
 docker compose -f docker-compose-dev.yml --env-file ./.env up
 </pre>
 
