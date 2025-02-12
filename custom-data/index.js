@@ -157,6 +157,17 @@ configLoad((args) => {
                     url         : 'copy/workbook.t.js'
                 }
             ]
+        },
+        {
+            group               : 'Entry',
+            //simulation          : 'native',
+            expanded            : false,
+            items               : [
+                {
+                    pageUrl     : args.pageUrl,
+                    url         : 'entry/run.t.js'
+                }
+            ]
         }
     )
 
