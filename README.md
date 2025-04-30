@@ -146,9 +146,7 @@ Falling back to synthetic events
 Запускаем `datalens`:
 
 <pre>
-sudo rm -r ./metadata
-sudo rm -r ./pg-demo-connection/data
-docker compose -f docker-compose-dev.yml --env-file ./.env up -d
+./init.sh --hc --hc-local --up
 </pre>
 
 ## Puppeteer
@@ -198,10 +196,11 @@ akrasnov87/siesta-lite:5.6.1
 ## Запуск тестирования в фоне
 
 1. Запускаем `datalens`
+
+Предаврительно удаляем volume `datalens_db-postgres`
+
 <pre>
-sudo rm -r ./metadata
-sudo rm -r ./pg-demo-connection/data
-docker compose -f docker-compose-dev.yml --env-file ./.env up
+./init --hc --hc-local --up
 </pre>
 
 __Примечание__: тестирование должно быть запущено, если есть возможность авторизации на странице http://localhost:8080

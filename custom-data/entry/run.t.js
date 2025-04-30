@@ -8,7 +8,7 @@ describe({
     var args = null;
     var pageUrl = null;
 
-    var workbookName = 'OpensourceDemo';
+    var workbookName = 'OpenSource Demo';
     var chartName = 'Charts: Area chart';
     
     t.chain(

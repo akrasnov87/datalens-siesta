@@ -21,7 +21,7 @@ describe({
 
         { waitForPageLoad : [], trigger : { click : "#root .g-button_view_outlined", offset : [75.11929321289062,24.288330078125] } },
 
-        { click : "#root .dl-collection-content-table__title-col-text:textEquals(OpensourceDemo)" },
+        { click : "#root .dl-collection-content-table__title-col-text:textEquals(OpenSource Demo)" },
 
         { click : "#root .dl-main-tab-content:nth-of-type(2) .dl-content-row__content-cell_title", offset : [62.10223388671875,38.57928466796875] }
     );

@@ -140,7 +140,7 @@ describe({
 
         { type : collectionName, target : "#root .dl-collection-filters__filter-string .g-text-input__control" },
 
-        { waitFor: 500 },
+        { waitFor: 2000 },
 
         { click : "#root .dl-collection-content-table__content .dl-collection-content-table__title-col-text:textEquals(" + collectionName + ")" },
 
