@@ -2,38 +2,33 @@ describe({
     name : "New recording...",
     enablePageRedirect : true
 }, function(t) {
-    t.global.localStorage.clear();
-    t.global.location.reload();
-
-    var args = null;
+    t.harness.helperObj.resetPage(t);
+    var chartName = 'Charts: Area chart';
+    var LONG_TIMEOUT = 2500;
+    //var args = null;
 
     var embedUrl = null;
     var embedUrl_1 = null;
 
     t.chain(
-        function(next) {
-            t.harness.configLoad((data)=>{
-                args = data;
-                next();
-            })
-        },
-        { click : "#root .g-text-input:nth-of-type(1) .g-text-input__control", desc: "Авторизация" },
+        t.harness.helperObj.loginHandler(
+            t, 
+            t.harness.helperObj.__NAMES__.MASTER.login, 
+            t.harness.helperObj.__NAMES__.MASTER.password
+        ),
+        t.harness.helperObj.workbookOrCollectionClickHandler(
+            t, 
+            t.harness.helperObj.__NAMES__.DEFAULT_WORKBOOK_NAME
+        ),
 
-        { type : "master[TAB][TAB]qwe-123", target : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
+        t.harness.helperObj.entryClickHandler(
+            t, 
+            chartName
+        ),
 
-        { waitForPageLoad : [], trigger : { click : "#root .g-button__text" } },
-
-        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o']" },
-
-        { click : "#root .dl-content-row [title='Charts\: Area chart']" },
-
-        { click : "#root .dl-entry-panel__action-btn .g-button__icon-inner > svg:nth-of-type(1)", offset : [17.484283447265625,12.217769622802734] },
-
-        { click : ".g-menu__item-content:textEquals(Поделиться)" },
-
-        {
-            waitFor: 5000
-        },
+        t.harness.helperObj.entryActionsClickHandler(t),
+        t.harness.helperObj.entryActionClickHandler(t, 'Поделиться'),
+        { waitFor: LONG_TIMEOUT },
 
         {
             action: function(next) {
@@ -46,81 +41,52 @@ describe({
         {
             action: function(next) {
                 t.global.localStorage.clear();
-                t.global.location.href = embedUrl.replace('http://localhost:8080', args.pageUrl);
+                t.global.location.href = embedUrl.replace('http://localhost:8080', t.harness.__ARGUMENTS__.pageUrl);
                 next();
             },
-            "desc": "Сброс авторизации и просмотр ссылки"
+            desc: "Сброс авторизации и просмотр ссылки"
         },
 
-        {
-            waitFor: 5000
-        },
+        { waitFor: LONG_TIMEOUT },
 
-        {
-            click: ".chartkit-graph"
-        },
+        t.harness.helperObj.foundHandler(t, '.chartkit-graph'),
 
-        {
-            action: function(next) {
-                t.global.localStorage.clear();
-                t.global.location.href = args.pageUrl + '/auth'
+        t.harness.helperObj.goToPage(t, '/auth'),
 
-                next();
-            },
-            "desc": "Авторизация под master"
-        },
+        t.harness.helperObj.loginHandler(
+            t, 
+            t.harness.helperObj.__NAMES__.MASTER.login, 
+            t.harness.helperObj.__NAMES__.MASTER.password
+        ),
 
-        { click : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
+        t.harness.helperObj.workbookOrCollectionClickHandler(
+            t, 
+            t.harness.helperObj.__NAMES__.DEFAULT_WORKBOOK_NAME
+        ),
 
-        { type : "master[TAB][TAB]qwe-123", target : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
+        t.harness.helperObj.entryClickHandler(
+            t, 
+            chartName
+        ),
 
-        { click : "#root .g-button__text"  },
-
-        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o']" },
-
-        { click : "#root .dl-content-row [title='Charts\: Area chart']" },
-
-        { click : "#root .dl-entry-panel__action-btn .g-button__icon-inner > svg:nth-of-type(1)", offset : [17.484283447265625,12.217769622802734] },
-
-        { click : ".g-menu__item-content:textEquals(Поделиться)" },
-        
-        {
-            waitFor: 500
-        },
-
+        t.harness.helperObj.entryActionsClickHandler(t),
+        t.harness.helperObj.entryActionClickHandler(t, 'Поделиться'),
+        { waitFor: LONG_TIMEOUT },
         { click : ".g-button__text:textEquals(Обновить ссылку)" },
-
-        {
-            waitFor: 500
-        },
-
+        { waitFor: LONG_TIMEOUT },
         { click : ".g-button__text:textEquals(Продолжить)" },
-
-        {
-            waitFor: 500
-        },
+        { waitFor: LONG_TIMEOUT },
 
         {
             action: function(next) {
-                embedUrl_1 = t.global.document.getElementsByClassName('dialog-share__text-field')[0].innerText.replace('http://localhost:8080', args.pageUrl);
+                embedUrl_1 = t.global.document.getElementsByClassName('dialog-share__text-field')[0].innerText.replace('http://localhost:8080', t.harness.__ARGUMENTS__.pageUrl);
                 next();
             },
             desc: "Копирование ссылки"
         },
+        { waitFor: LONG_TIMEOUT },
 
-        {
-            waitFor: 10000
-        },
-
-        {
-            action: function(next) {
-                t.global.localStorage.clear();
-                t.global.location.reload();
-
-                next();
-            },
-            "desc": "Сброс авторизации и просмотр старой ссылки"
-        },
+        t.harness.helperObj.resetAuthHandler(t),
 
         {
             action: function(next) {
@@ -128,17 +94,12 @@ describe({
 
                 next();
             },
-            "desc": "Просмотр ссылки"
+            desc: "Просмотр ссылки"
         },
+        
+        { waitFor: LONG_TIMEOUT },
 
-        {
-            waitFor: 1000
-        },
-
-        function(next) {
-            t.selectorExists('.preview__loader', 'Ссылка не доступна');
-            next();
-        },
+        t.harness.helperObj.foundHandler(t, '.preview__loader'),
 
         {
             action: function(next) {
@@ -149,16 +110,11 @@ describe({
 
                 next();
             },
-            "desc": "Сброс авторизации и просмотр старой ссылки"
+            desc: "Сброс авторизации и просмотр старой ссылки"
         },
 
-        {
-            waitFor: 5000
-        },
+        { waitFor: LONG_TIMEOUT },
 
-        function(next) {
-            t.selectorExists('.chartkit-graph', 'График доступен');
-            next();
-        }
+        t.harness.helperObj.foundHandler(t, '.chartkit-graph')
     )
 });

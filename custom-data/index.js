@@ -15,17 +15,19 @@ function configLoad(callback) {
 }
 
 project.configLoad = configLoad;
+project.helperObj = helperObj;
+project.helperObj.__NAMES__ = __NAMES__;
 
 configLoad((args) => {
     window.__ARGUMENTS__ = args;
-
+    project.__ARGUMENTS__ = args;
 
     project.configure({
         title               : 'Siesta generic browser examples',
         viewDOM             : true,
         maxThreads          : 1,
         // Define any global JS and CSS dependencies, these files will be injected into each test.
-        preload             : ['./helper.js'],
+        preload             : [],
 
         recorderConfig      : {
             // enable/disable certain features of the recorder, see the Siesta.Recorder.Recorder documentation
@@ -42,6 +44,7 @@ configLoad((args) => {
             group               : 'LogIn',
             // simulation          : 'native',
             expanded            : false,
+            
             items               : [
                 {
                     pageUrl     : args.pageUrl,

@@ -197,7 +197,7 @@ akrasnov87/siesta-lite:5.6.1
 
 1. Запускаем `datalens`
 
-Предаврительно удаляем volume `datalens_db-postgres`
+Предаврительно удаляем volume `datalens-volume-*`
 
 <pre>
 ./init --hc --hc-local --up

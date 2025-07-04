@@ -48,9 +48,11 @@ describe({
 
         { type : "admin[TAB][TAB]qwe-123", target : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
 
-        { click : "#root .g-button__text"  },
+        { waitForPageLoad : [], trigger : { click : "#root .g-button__text" } },
 
-        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o'] div:nth-of-type(5):empty", desc: "Назначение прав отсутствует" },
+        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o'] div:nth-of-type(5) button.g-button", desc: "Назначение прав отсутствует" },
+
+        t.harness.helperObj.notFoundHandler(t, ".dl-collection-dropdown-action__text:textEquals(Доступ)"),
 
         {
             action: function(next) {
@@ -65,10 +67,12 @@ describe({
 
         { type : "user[TAB][TAB]qwe-123", target : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
 
-        { click : "#root .g-button__text"  },
+        { waitForPageLoad : [], trigger : { click : "#root .g-button__text" } },
 
-        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o'] div:nth-of-type(5):empty", desc: "Назначение прав отсутствует" },
+        { click : "#root .dl-collection-content-table__content-row[href='/workbooks/z4wtz6tg5194o'] div:nth-of-type(5) button.g-button", desc: "Назначение прав отсутствует" },
 
+        t.harness.helperObj.notFoundHandler(t, ".dl-collection-dropdown-action__text:textEquals(Доступ)"),
+        
         {
             action: function(next) {
                 t.global.localStorage.clear();
@@ -110,7 +114,7 @@ describe({
 
         { type : "admin[TAB][TAB]qwe-123", target : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
 
-        { click : "#root .g-button__text"  },
+        { waitForPageLoad : [], trigger : { click : "#root .g-button__text" } },
 
         { type : "#root .gc-placeholder-container__title:textEquals(Нет коллекций и воркбуков)" }
     )

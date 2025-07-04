@@ -109,7 +109,7 @@ describe({
 
         { type : userName + "[TAB][TAB]12345", target : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
 
-        { click : "#root .g-button__text"  },
+        { waitForPageLoad : [], trigger : { click : "#root .g-button__text" } },
 
         { type: ".g-toast__title:textEquals(Request failed with status code 401)" },
 
