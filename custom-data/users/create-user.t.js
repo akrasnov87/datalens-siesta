@@ -42,7 +42,7 @@ describe({
 
         { click : ".base-admin__form .g-select:nth-of-type(2) button" },
 
-        { click : ".g-popup__content .g-list__items .g-select-list__option-default-label:textEquals(Внешний пользователь)" },
+        { click : ".g-select-popup .g-list__items .g-select-list__option-default-label:textEquals(Внешний пользователь)" },
 
         { click : "#root .base-admin__wrapper", offset : [467.31903076171875,493.8712463378906] },
 
@@ -54,7 +54,7 @@ describe({
 
         { click : ".base-admin__form .g-select:nth-of-type(3) button" },
 
-        { click : ".g-popup__content .g-list__items .g-select-list__option-default-label:textEquals(Пользователь)" },
+        { click : ".g-select-popup .g-list__items .g-select-list__option-default-label:textEquals(Пользователь)" },
 
         { click : "#root .base-admin__wrapper", offset : [467.31903076171875,493.8712463378906] },
 
@@ -82,11 +82,13 @@ describe({
 
         { click : "#root .g-button__text:textEquals(Изменить)" },
 
-        { click : "#root .g-radio-button__option:nth-of-type(2) .g-radio-button__option-control" },
+        //{ click : ".base-admin__form .g-select:nth-of-type(2) button" },
+
+        //{ click : "#root .g-radio-button__option:nth-of-type(2) .g-radio-button__option-control" },
 
         { click : ".base-admin__form .g-select:nth-of-type(3) button" },
 
-        { click : ".g-popup__content .g-list__items .g-select-list__option-default-label:textEquals(Внешний пользователь)" },
+        { click : ".g-select-popup .g-list__items .g-select-list__option-default-label:textEquals(Внешний пользователь)" },
 
         { click : "#root .base-admin__wrapper", offset : [467.31903076171875,493.8712463378906] },
 
@@ -142,7 +144,9 @@ describe({
 
         { click : "#root .g-button__text:textEquals(Изменить)" },
 
-        { click : "#root .g-radio-button__option:nth-of-type(1) .g-radio-button__option-control" },
+        //{ click : "#root .g-radio-button__option:nth-of-type(1) .g-radio-button__option-control" },
+
+        { click : ".base-admin__form .g-select:nth-of-type(1) button" },
 
         { click : "#root .base-admin__form .g-button_view_action :textEquals(Изменить)" },
 

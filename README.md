@@ -174,8 +174,8 @@ __Примечание__: можно воспользоваться команд
 __Запуск контейнера__: 
 <pre>
 docker run --rm -p 8000:8000 \
--v /home/a-krasnov/data/code/datalens/siesta-5.6.1-trial/custom-data:/siesta/custom-data \
--v /home/a-krasnov/data/code/datalens/siesta-5.6.1-trial/reports:/siesta/reports \
+-v /home/a-krasnov/data/code/fork/datalens/siesta-5.6.1-trial/custom-data:/siesta/custom-data \
+-v /home/a-krasnov/data/code/fork/datalens/siesta-5.6.1-trial/reports:/siesta/reports \
 -e BACKGROUND_TEST_FOLDER=custom-data \
 --name siesta-lite \
 akrasnov87/siesta-lite:5.6.1
@@ -187,8 +187,8 @@ akrasnov87/siesta-lite:5.6.1
 
 <pre>
 docker run --rm -p 8000:8000 \
--v /home/a-krasnov/data/code/datalens/siesta-5.6.1-trial/custom-data:/siesta/custom-data \
--v /home/a-krasnov/data/code/datalens/siesta-5.6.1-trial/reports:/siesta/reports \
+-v /home/a-krasnov/data/code/fork/datalens/siesta-5.6.1-trial/custom-data:/siesta/custom-data \
+-v /home/a-krasnov/data/code/fork/datalens/siesta-5.6.1-trial/reports:/siesta/reports \
 --name siesta-lite \
 akrasnov87/siesta-lite:5.6.1
 </pre>
@@ -205,15 +205,15 @@ akrasnov87/siesta-lite:5.6.1
 
 __Примечание__: тестирование должно быть запущено, если есть возможность авторизации на странице http://localhost:8080
 
-В терминале должена появиться строке `Worker listening 59 on port 5001/demo/`
+В терминале должна появиться строке `Worker listening 59 on port 5001/demo/`
 
 2. Ожидаем загрузки `datalens`
 
 3. Запускаем тестирование:
 <pre>
 docker run --rm -p 8000:8000 \
--v /home/a-krasnov/data/code/datalens/siesta-5.6.1-trial/custom-data:/siesta/custom-data \
--v /home/a-krasnov/data/code/datalens/siesta-5.6.1-trial/reports:/siesta/reports \
+-v "/home/a-krasnov/data/code/fork/datalens/siesta-5.6.1-trial/custom-data":/siesta/custom-data \
+-v "/home/a-krasnov/data/code/fork/datalens/siesta-5.6.1-trial/reports":/siesta/reports \
 -e BACKGROUND_TEST_FOLDER=custom-data \
 --name siesta-lite \
 akrasnov87/siesta-lite:5.6.1

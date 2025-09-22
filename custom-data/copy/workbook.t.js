@@ -34,7 +34,7 @@ describe({
 
         { click : ".g-dialog-body .dl-workbook-dialog__field:nth-of-type(2) button" },
 
-        { click : ".g-popup__content .g-list__items .g-select-list__option-default-label:textEquals('datalens-demo')" },
+        { click : ".g-select-popup .g-list__items .g-select-list__option-default-label:textEquals('datalens-demo')" },
 
         { click : ".g-dialog-footer__button-apply .g-button__text:textEquals(Создать)" },
 
@@ -81,7 +81,7 @@ describe({
 
         { click : ".g-dialog-body .dl-collection-dialog__field:nth-of-type(2) button" },
 
-        { click : ".g-popup__content .g-list__items .g-select-list__option-default-label:textEquals('datalens-demo')" },
+        { click : ".g-select-popup .g-list__items .g-select-list__option-default-label:textEquals('datalens-demo')" },
 
         { click : ".g-dialog-footer__button-apply .g-button__text:textEquals(Создать)" },
 

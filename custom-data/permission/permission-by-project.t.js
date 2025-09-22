@@ -74,15 +74,15 @@ describe({
 
         { click : ".base-admin__form .g-select:nth-of-type(1) button" },
 
-        { click : ".g-popup__content .g-list__items .g-select-list__option-default-label:textEquals(" + projectUfName + ")" },
+        { click : ".g-select-popup .g-list__items .g-select-list__option-default-label:textEquals(" + projectUfName + ")" },
 
         { click : ".base-admin__form .g-select:nth-of-type(2) button" },
 
-        { click : ".g-popup__content .g-list__items .g-select-list__option-default-label:textEquals(Пользователь)" },
+        { click : ".g-select-popup .g-list__items .g-select-list__option-default-label:textEquals(Пользователь)" },
 
         { click : "#root .base-admin__wrapper", offset : [467.31903076171875,493.8712463378906] },
 
-        { click : "#root .base-admin__form .g-button__text:textEquals(Создать)" },
+        { click : "#root .base-admin-form__buttons-wrapper .g-button__text:textEquals(Создать)" },
 
         { type: ".g-table base-admin__table .g-table__row .g-table__cell g-table__cell_edge-padding:textEquals(" +userName + ")"},
 
@@ -106,7 +106,7 @@ describe({
 
         { click : ".g-dialog-body .dl-collection-dialog__field:nth-of-type(2) button" },
 
-        { click : ".g-popup__content .g-list__items .g-select-list__option-default-label:textEquals(" + projectName + ")" },
+        { click : ".g-select-popup .g-list__items .g-select-list__option-default-label:textEquals(" + projectName + ")" },
 
         { click : ".g-dialog-footer__button-apply .g-button__text" },
 
@@ -120,7 +120,7 @@ describe({
 
         { click : ".g-dialog-body .dl-workbook-dialog__field:nth-of-type(2) button" },
 
-        { click : ".g-popup__content .g-list__items .g-select-list__option-default-label:textEquals(datalens-demo)" },
+        { click : ".g-select-popup .g-list__items .g-select-list__option-default-label:textEquals(datalens-demo)" },
 
         { click : ".g-dialog-footer__button-apply", offset : [104.18182373046875,18.5771484375] },
 
@@ -144,7 +144,7 @@ describe({
 
         { click : ".g-dialog-body .dl-workbook-dialog__field:nth-of-type(2) button" },
 
-        { click : ".g-popup__content .g-list__items .g-select-list__option-default-label:textEquals(" + projectName + ")" },
+        { click : ".g-select-popup .g-list__items .g-select-list__option-default-label:textEquals(" + projectName + ")" },
 
         { click : ".g-dialog-footer__button-apply .g-button__text" },
 
