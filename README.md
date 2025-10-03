@@ -174,6 +174,7 @@ __Примечание__: можно воспользоваться команд
 __Запуск контейнера__: 
 <pre>
 docker run --rm -p 8000:8000 \
+--add-host=host.docker.internal:host-gateway \
 -v /home/a-krasnov/data/code/fork/datalens/siesta-5.6.1-trial/custom-data:/siesta/custom-data \
 -v /home/a-krasnov/data/code/fork/datalens/siesta-5.6.1-trial/reports:/siesta/reports \
 -e BACKGROUND_TEST_FOLDER=custom-data \
@@ -212,8 +213,9 @@ __Примечание__: тестирование должно быть зап�
 3. Запускаем тестирование:
 <pre>
 docker run --rm -p 8000:8000 \
--v "/home/a-krasnov/data/code/fork/datalens/siesta-5.6.1-trial/custom-data":/siesta/custom-data \
--v "/home/a-krasnov/data/code/fork/datalens/siesta-5.6.1-trial/reports":/siesta/reports \
+--add-host=host.docker.internal:host-gateway \
+-v /home/a-krasnov/data/code/fork/datalens/siesta-5.6.1-trial/custom-data:/siesta/custom-data \
+-v /home/a-krasnov/data/code/fork/datalens/siesta-5.6.1-trial/reports:/siesta/reports \
 -e BACKGROUND_TEST_FOLDER=custom-data \
 --name siesta-lite \
 akrasnov87/siesta-lite:5.6.1
