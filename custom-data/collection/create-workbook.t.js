@@ -18,11 +18,11 @@ describe({
                 next();
             })
         },
-        { click : "#root .g-text-input:nth-of-type(1) .g-text-input__control", desc: "Авторизация" },
-
-        { type : "master[TAB][TAB]qwe-123", target : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
-
-        { waitForPageLoad : [], trigger : { click : "#root .g-button__text" } },
+        t.harness.helperObj.loginHandler(
+            t, 
+            t.harness.helperObj.__NAMES__.MASTER.login, 
+            t.harness.helperObj.__NAMES__.MASTER.password
+        ),
 
         { click : "#root .g-button__icon_side_end .g-button__icon-inner > svg:nth-of-type(1)" },
 

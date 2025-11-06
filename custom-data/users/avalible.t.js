@@ -21,7 +21,7 @@ describe({
         },
         { click : "#root .g-text-input:nth-of-type(1) .g-text-input__control", desc: "Авторизация" },
 
-        { type : "master[TAB][TAB]qwe-123", target : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
+        { type : "master[TAB]qwe-123", target : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
 
         { waitForPageLoad : [], trigger : { click : "#root .g-button__text" } },
 
@@ -47,7 +47,7 @@ describe({
 
         { click : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
 
-        { type : "admin[TAB][TAB]qwe-123", target : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
+        { type : "admin[TAB]qwe-123", target : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
 
         { waitForPageLoad : [], trigger : { click : "#root .g-button__text" } },
 
@@ -73,7 +73,7 @@ describe({
 
         { click : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
 
-        { type : "user[TAB][TAB]qwe-123", target : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
+        { type : "user[TAB]qwe-123", target : "#root .g-text-input:nth-of-type(1) .g-text-input__control" },
 
         { waitForPageLoad : [], trigger : { click : "#root .g-button__text" } },
 
