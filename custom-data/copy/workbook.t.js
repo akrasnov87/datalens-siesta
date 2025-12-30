@@ -53,7 +53,7 @@ describe({
 
         { click : "#root :nth-of-type(4) .g-text-input__control" },
 
-        { type : "user[TAB]user", target : "#root :nth-of-type(4) .g-text-input__control" },
+        { type : "user[TAB][TAB]user", target : "#root :nth-of-type(4) .g-text-input__control" },
 
         { click : "#root .g-button__text:textEquals(Создать подключение)" },
 
