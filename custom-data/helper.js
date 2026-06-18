@@ -32,7 +32,9 @@ var helperObj = {
 
             { type : login + "[TAB]" + password, target : "#root .g-text-input:nth-of-type(1) .g-text-input__control", desc: "Ввод логина (" +login + ") и пароля (" + password + ")"  },
 
-            { waitForPageLoad : [], trigger : { click : "#root .g-button_view_action" }, desc: "Нажатие на кнопку ВОЙТИ" }
+            { waitForPageLoad : [], trigger : { click : "#root .g-button_view_action" }, desc: "Нажатие на кнопку ВОЙТИ" },
+
+            { waitFor: 1000 },
         ]
     },
 
